@@ -15,18 +15,32 @@
     </div>
     <div class="home-slider swiper first-swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="<?php bloginfo("template_url") ?>/assets/img/home-slider-1.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php bloginfo("template_url") ?>/assets/img/home-slider-1.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php bloginfo("template_url") ?>/assets/img/home-slider-1.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php bloginfo("template_url") ?>/assets/img/home-slider-1.png" alt="" />
-        </div>
+        <?php
+        $args = array(
+          'post_type' => 'slider',
+          'posts_per_page' => 3
+        );
+        $qry = new WP_Query($args);
+        if ($qry->have_posts()) {
+          while ($qry->have_posts()) {
+            $qry->the_post();
+            ?>
+            <div class="swiper-slide">
+              <a target="_blank" href="<?php bloginfo('url'); ?>">
+                <?php the_post_thumbnail(); ?>
+              </a>
+            </div>
+            <?php
+          }
+        } else {
+          ?>
+          <div class="swiper-slide">
+            <img src="<?php bloginfo("template_url") ?>/assets/img/home-slider-1.png" alt="" />
+          </div>
+          <?php
+        }
+        wp_reset_postdata();
+        ?>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
