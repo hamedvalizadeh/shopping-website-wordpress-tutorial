@@ -1,39 +1,11 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="<?php bloginfo("charset"); ?>" />
-  <title>
-    <?php bloginfo("name"); ?>
-  </title>
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/style.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/menu.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/header.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/slider.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/discount-box.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/suggest-box.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/icon-box.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/best-selling.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/middle-banner.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/last-article.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/authentic-brand.css" />
-  <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/footer.css" />
-  <?php wp_head(); ?>
+  <?php get_header('head'); ?>
 </head>
 
 <body>
-  <header>
-    <a class="btn-search" href="#"></a>
-    <a class="btn-basket" href="#"></a>
-    <a class="btn-register" href="#">ورود/ثبت نام</a>
-    <a class="logo" href="#"><img src="<?php bloginfo("template_url") ?>/assets/img/Logo.png" alt="" /></a>
-    <nav class="main-menu">
-      <?php wp_nav_menu(array(
-        'theme_location' => 'header-menu',
-        'container' => ''
-      )); ?>
-    </nav>
-  </header>
+  <?php get_header('menu'); ?>
 
   <div class="recotik-container">
     <div class="left-banner">
@@ -335,75 +307,9 @@
     </div>
   </div>
 
-  <footer>
-    <div class="recotik-container">
-      <div class="footer-icon"></div>
-      <div class="footer-detail">
-        <h4 class="footer-detail-title">راه های ارتباطی</h4>
-        <p>
-          شماره تماس : 02144488855
-          <br />
-          ایمیل: kw@info.com
-          <br />
-          آدرس : آدرس مورد نظر
-          <br />
-          زمان پاسخگویی : از هشت صبح تا هشت بعد از ظهر
-        </p>
-      </div>
-      <div class="footer-detail">
-        <h4 class="footer-detail-title">دسترسی سریع</h4>
-        <ul>
-          <li><a href="">درباره ما</a></li>
-          <li><a href="">پیگیری سفارش</a></li>
-          <li><a href="">روش های پرداخت</a></li>
-          <li><a href="">سوالات متداول</a></li>
-        </ul>
-      </div>
-      <div class="footer-detail">
-        <h4 class="footer-detail-title">مجوزها</h4>
-        <a href=""><img src="<?php bloginfo("template_url") ?>/assets/img/footer-credits.png" alt="" /></a>
-      </div>
-      <div class="footer-copy-right">
-        <p>
-          استفاده از منابع سایت برای اهداف غیر تجاری با ذکر منبع بدون مانع می
-          باشد
-        </p>
-      </div>
-    </div>
-  </footer>
-  <?php wp_footer(); ?>
-  <script src="<?php bloginfo("template_url") ?>/assets/js/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".first-swiper", {
-      loop: true,
-      autoplay: {
-        delay: 2000,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
-      },
-    });
-  </script>
-  <script>
-    var menu = ["10%", "20%"];
-    var swiper2 = new Swiper(".discount-swiper", {
-      loop: true,
-      direction: "vertical",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + menu[index] + "</span>";
-        },
-      },
-    });
-  </script>
+  <?php get_footer('foot'); ?>
+  <?php get_footer('script-slider'); ?>
+
 </body>
 
 </html>
