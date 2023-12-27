@@ -24,5 +24,22 @@ function recotik_slider_post_type()
         'supports' => array('title', 'editor', 'thumbnail', 'link')
     ));
 }
-
 add_filter('init', 'recotik_slider_post_type');
+
+//this function for brand post type
+function recotik_brand_post_type()
+{
+    register_post_type('brands', array(
+        'labels' => array(
+            'name' => __('برندها'),
+            'singular_name' => __('برند'),
+            'add_new' => __('افزودن برند'),
+            'add_new_item' => __('افزودن برند جدید')
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'supports' => array('title', 'editor', 'thumbnail', 'link'),
+        'menu_icon' => 'dashicons-admin-multisite'
+    ));
+}
+add_filter('init', 'recotik_brand_post_type');

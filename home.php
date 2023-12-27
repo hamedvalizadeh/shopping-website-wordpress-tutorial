@@ -268,36 +268,25 @@
                 <h2 class="authentic-brand-head-title">برندهای معتبر</h2>
             </div>
             <div class="authentic-brand-item-container">
-                <a href="">
-                    <div>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/authentic-brand-item1.png" alt="" />
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/authentic-brand-item2.png" alt="" />
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/authentic-brand-item3.png" alt="" />
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/authentic-brand-item4.png" alt="" />
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/authentic-brand-item5.png" alt="" />
-                    </div>
-                </a>
-                <a href="">
-                    <div>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/authentic-brand-item6.png" alt="" />
-                    </div>
-                </a>
+                <?php
+                $arg = array('post_type' => 'brands');
+                $qry = new WP_Query($arg);
+                if ($qry->have_posts()) {
+                    while ($qry->have_posts()) {
+                        $qry->the_post();
+                        ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <div>
+                                <?php the_post_thumbnail(); ?>
+                            </div>
+                        </a>
+                        <?php
+                    }
+                } else {
+                    echo 'Not Yet';
+                }
+                wp_reset_postdata();
+                ?>
             </div>
         </div>
     </div>
