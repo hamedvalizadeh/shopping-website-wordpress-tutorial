@@ -43,3 +43,30 @@ function recotik_brand_post_type()
     ));
 }
 add_filter('init', 'recotik_brand_post_type');
+
+//this function for add widget for footer
+function recotick_register_widget()
+{
+    register_sidebar(array(
+        'name' => __('فوتر رکوتیک شماره یک', 'recotick'),
+        'id' => 'footer-1',
+        'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون اول فوتر اضافه کنید.', 'recotick'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>'
+    ));
+    register_sidebar(array(
+        'name' => __('فوتر رکوتیک شماره دو', 'recotick'),
+        'id' => 'footer-2',
+        'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون دوم فوتر اضافه کنید.', 'recotick'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>'
+    ));
+    register_sidebar(array(
+        'name' => __('فوتر رکوتیک شماره سه', 'recotick'),
+        'id' => 'footer-3',
+        'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون سوم فوتر اضافه کنید.', 'recotick'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>'
+    ));
+}
+add_action('widgets_init', 'recotick_register_widget');

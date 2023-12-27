@@ -228,7 +228,7 @@
                 <?php
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 3
+                    'posts_per_page' => 5
                 );
                 $qry = new WP_Query($args);
                 if ($qry->have_posts()) {
@@ -269,7 +269,8 @@
             </div>
             <div class="authentic-brand-item-container">
                 <?php
-                $arg = array('post_type' => 'brands');
+                $arg = array('post_type' => 'brands',
+                    'posts_per_page' => 6);
                 $qry = new WP_Query($arg);
                 if ($qry->have_posts()) {
                     while ($qry->have_posts()) {
