@@ -1,8 +1,3 @@
-<!-- <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/menu.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" /> -->
-
 <html lang="en" dir="ltr">
 
 <head>
@@ -20,49 +15,18 @@
   <?php get_header('menu'); ?>
 
   <div class="recotik-container">
-    <div class="bread-crumb">صفحه اصلی > مقالات > محبوب ترین سنسورها</div>
+    <div class="bread-crumb"><?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?></div>
     <section class="page-content">
-      <h1 class="page-title"><?php the_title(); ?></h1>
+      <h1 class="page-title">
+        <?php the_title(); ?>
+      </h1>
       <p class="page-description">
         <?php the_content(); ?>
       </p>
     </section>
-    <aside>
-      <a href=""><img src="<?php bloginfo("template_url") ?>/assets/img/aside-ad1.png" alt="" /></a>
-      <div class="aside-related-post">
-        <span class="aside-related-post-title">آخرین نوشته ها</span>
-        <div>
-          <a href="">
-            <img src="<?php bloginfo("template_url") ?>/assets/img/last-write1.png" alt="" />
-            <h3>سنسور اچ اس تی 11</h3>
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img src="<?php bloginfo("template_url") ?>/assets/img/last-write2.png" alt="" />
-            <h3>سنسور ال ام 35 برای بهبود عملکرد دستگاه</h3>
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img src="<?php bloginfo("template_url") ?>/assets/img/last-write1.png" alt="" />
-            <h3>سنسور اچ اس تی 11</h3>
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img src="<?php bloginfo("template_url") ?>/assets/img/last-write2.png" alt="" />
-            <h3>سنسور ال ام 35</h3>
-          </a>
-        </div>
-      </div>
-
-      <a href=""><img src="<?php bloginfo("template_url") ?>/assets/img/aside-ad2.png" alt="" /></a>
-    </aside>
+    <?php get_sidebar('pgeaside');?>
   </div>
-
-  <div class="clear"></div>
-
+  
   <?php get_footer('foot'); ?>
   <?php get_footer('script-slider'); ?>
 </body>

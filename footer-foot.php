@@ -1,3 +1,4 @@
+<div class="clear"></div>
 <footer>
     <div class="recotik-container">
         <div class="footer-icon"></div>
