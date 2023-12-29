@@ -68,5 +68,84 @@ function recotick_register_widget()
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>'
     ));
+
+    register_sidebar(array(
+        'name' => __('سایدبار رکوتیک', 'recotick'),
+        'id' => 'sidebar-widget-1',
+        'description' => __('این ویجت برای سایدبار صفحه می باشد', 'recotick'),
+        'before_widget' => '',
+        'after_widget' => ''
+    ));
 }
 add_action('widgets_init', 'recotick_register_widget');
+
+//Register Recent Posts Widgets
+class Recotick_Recent_Posts_Widget extends WP_Widget
+{
+    function __construct()
+    {
+        parent::__construct(false, __('ابزارک نمایش آخرین پستها', 'recotick'));
+    }
+
+    function widget($args, $instance)
+    {
+        $title = $instance['recentposttitle'];
+        $number = $instance['recentpostnumber'];
+        ?>
+        <div class="aside-related-post">
+            <span class="aside-related-post-title">
+                <?php echo $title; ?>
+            </span>
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => $number
+            );
+            $qry = new WP_Query($args);
+            if ($qry->have_posts()) {
+                while ($qry->have_posts()) {
+                    $qry->the_post();
+                    ?>
+                    <div>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+                            <h3>
+                                <?php the_title(); ?>
+                            </h3>
+                        </a>
+                    </div>
+                    <?php
+                }
+            }
+            ?>
+        </div>
+        <?php
+    }
+
+    function update($new_instance, $old_instance)
+    {
+        return $new_instance;
+    }
+
+    function form($instance)
+    {
+        $title = $instance['recentposttitle'];
+        $number = $instance['recentpostnumber'];
+        ?>
+        <label>عنوان پست</label>
+        <input type="text" name="<?php echo $this->get_field_name('recentposttitle'); ?>"
+            id="<?php echo $this->get_field_id('recentposttitle'); ?>" value="<?php echo $title; ?>">
+
+        <label for="">تعداد پست</label>
+        <input type="number" name="<?php echo $this->get_field_name('recentpostnumber'); ?>"
+            id="<?php echo $this->get_field_id('recentpostnumber'); ?>" value="<?php echo $number; ?>">
+        <?php
+    }
+}
+
+add_action('widgets_init', 'recotick_recent_posts_register_widgets');
+
+function recotick_recent_posts_register_widgets()
+{
+    register_widget('Recotick_Recent_Posts_Widget');
+}
