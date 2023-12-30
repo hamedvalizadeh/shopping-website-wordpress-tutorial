@@ -22,7 +22,7 @@
     </div>
     <section class="page-content">
       <div class="post-head-image">
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail('post-detail-image-size'); ?>
       </div>
       <div class="post-head-data">
         <span class="post-head-data-category">

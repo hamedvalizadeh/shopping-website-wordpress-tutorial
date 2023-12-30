@@ -99,7 +99,7 @@ class Recotick_Recent_Posts_Widget extends WP_Widget
             <?php
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => $number
+                'posts_per_page' => 1
             );
             $qry = new WP_Query($args);
             if ($qry->have_posts()) {
@@ -108,7 +108,7 @@ class Recotick_Recent_Posts_Widget extends WP_Widget
                     ?>
                     <div>
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail(); ?>
+                            <?php the_post_thumbnail('recent-post-image-size'); ?>
                             <h3>
                                 <?php the_title(); ?>
                             </h3>
@@ -149,3 +149,7 @@ function recotick_recent_posts_register_widgets()
 {
     register_widget('Recotick_Recent_Posts_Widget');
 }
+
+//add image size for recent post widget
+add_image_size('recent-post-image-size', 60, 60, true);
+add_image_size('post-detail-image-size', 400, 250, true);
