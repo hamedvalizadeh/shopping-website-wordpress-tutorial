@@ -12,17 +12,19 @@ add_theme_support('post-thumbnails');
 //this function for slider post type
 function recotik_slider_post_type()
 {
-    register_post_type('slider', array(
-        'labels' => array(
-            'name' => __('اسلایدرها'),
-            'singular_name' => __('اسلایدر'),
-            'add_new' => __('افزودن اسلایدر'),
-            'add_new_item' => __('افزودن اسلایدر جدید')
-        ),
-        'public' => true,
-        'has_archive' => false,
-        'supports' => array('title', 'editor', 'thumbnail', 'link')
-    )
+    register_post_type(
+        'slider',
+        array(
+            'labels' => array(
+                'name' => __('اسلایدرها'),
+                'singular_name' => __('اسلایدر'),
+                'add_new' => __('افزودن اسلایدر'),
+                'add_new_item' => __('افزودن اسلایدر جدید')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'supports' => array('title', 'editor', 'thumbnail', 'link')
+        )
     );
 }
 add_filter('init', 'recotik_slider_post_type');
@@ -30,18 +32,20 @@ add_filter('init', 'recotik_slider_post_type');
 //this function for brand post type
 function recotik_brand_post_type()
 {
-    register_post_type('brands', array(
-        'labels' => array(
-            'name' => __('برندها'),
-            'singular_name' => __('برند'),
-            'add_new' => __('افزودن برند'),
-            'add_new_item' => __('افزودن برند جدید')
-        ),
-        'public' => true,
-        'has_archive' => false,
-        'supports' => array('title', 'editor', 'thumbnail', 'link'),
-        'menu_icon' => 'dashicons-admin-multisite'
-    )
+    register_post_type(
+        'brands',
+        array(
+            'labels' => array(
+                'name' => __('برندها'),
+                'singular_name' => __('برند'),
+                'add_new' => __('افزودن برند'),
+                'add_new_item' => __('افزودن برند جدید')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'supports' => array('title', 'editor', 'thumbnail', 'link'),
+            'menu_icon' => 'dashicons-admin-multisite'
+        )
     );
 }
 add_filter('init', 'recotik_brand_post_type');
@@ -170,3 +174,62 @@ function recotick_browser_tap_title()
     add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'recotick_browser_tap_title');
+
+//pagination
+// function zeroize_page_numbers($link, $i)
+// {
+//     $zeroised = zeroise($i, 2);
+
+//     $link = str_replace($i, $zeroised, $link);
+
+//     return $link;
+// }
+// add_filter('number_post_nav', 'zeroize_page_numbers', 10, 2);
+
+function recotik_numeric_post_nav()
+{
+    if (is_singular())
+        return;
+    global $wp_query;
+    /* Stop the code if there is only a single page page */
+    if ($wp_query->max_num_pages <= 1)
+        return;
+    $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+    $max = intval($wp_query->max_num_pages);
+    /*Add current page into the array */
+    if ($paged >= 1)
+        $links[] = $paged;
+    /*Add the pages around the current page to the array */
+    if ($paged >= 3) {
+        $links[] = $paged - 1;
+        $links[] = $paged - 2;
+    }
+    if (($paged + 2) <= $max) {
+        $links[] = $paged + 2;
+        $links[] = $paged + 1;
+    }
+    echo '<ul id="news-pagination">' . "\n";
+
+
+    /*Display Link to first page*/
+    if (!in_array(1, $links)) {
+        $class = 1 == $paged ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link(1)), '1');
+        if (!in_array(2, $links))
+            echo '<li>…</li>';
+    }
+    /* Link to current page */
+    sort($links);
+    foreach ((array) $links as $link) {
+        $class = $paged == $link ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($link)), $link);
+    }
+    /* Link to last page, plus ellipses if necessary */
+    if (!in_array($max, $links)) {
+        if (!in_array($max - 1, $links))
+            echo '<li>…</li>' . "\n";
+        $class = $paged == $max ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)), $max);
+    }
+    echo '</ul>' . "\n";
+}

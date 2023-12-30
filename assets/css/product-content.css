@@ -23,8 +23,10 @@ div .prodect-item {
 }
 
 div .prodect-item img {
-    width : 212px;
-    height: 212px;
+    width        : 192px;
+    height       : 192px;
+    margin       : 10px;
+    border-radius: 10px;
 }
 
 .prodect-item>p {
@@ -63,4 +65,38 @@ div .content-category-item {
     text-align      : center;
     box-shadow      : 0 0 5px #cfcfcf;
     margin-bottom   : 20px;
+}
+
+.product-content .navigation {
+    text-align: center;
+}
+
+.product-content #news-pagination {
+    text-align      : center;
+    background-color: white;
+    display         : inline-block;
+    height          : 50px;
+    border-radius   : 25px;
+    box-shadow      : 0 0 5px #d1d1d1;
+}
+
+.product-content #news-pagination li {
+    display: inline-flex;
+}
+
+.product-content #news-pagination li a {
+    width           : 40px;
+    height          : 40px;
+    border-radius   : 100%;
+    background-color: white;
+    box-shadow      : 0 0 5px #d1d1d1;
+    font-size       : 20px;
+    line-height     : 40px;
+    margin          : 5px 5px;
+}
+
+.product-content #news-pagination li.active a {
+    background-color: #6a6aff;
+    box-shadow      : 0 0 5px #1e1eff;
+    color           : white;
 }
