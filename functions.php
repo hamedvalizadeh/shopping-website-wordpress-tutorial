@@ -22,7 +22,8 @@ function recotik_slider_post_type()
         'public' => true,
         'has_archive' => false,
         'supports' => array('title', 'editor', 'thumbnail', 'link')
-    ));
+    )
+    );
 }
 add_filter('init', 'recotik_slider_post_type');
 
@@ -40,42 +41,51 @@ function recotik_brand_post_type()
         'has_archive' => false,
         'supports' => array('title', 'editor', 'thumbnail', 'link'),
         'menu_icon' => 'dashicons-admin-multisite'
-    ));
+    )
+    );
 }
 add_filter('init', 'recotik_brand_post_type');
 
 //this function for add widget for footer
 function recotick_register_widget()
 {
-    register_sidebar(array(
-        'name' => __('فوتر رکوتیک شماره یک', 'recotick'),
-        'id' => 'footer-1',
-        'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون اول فوتر اضافه کنید.', 'recotick'),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>'
-    ));
-    register_sidebar(array(
-        'name' => __('فوتر رکوتیک شماره دو', 'recotick'),
-        'id' => 'footer-2',
-        'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون دوم فوتر اضافه کنید.', 'recotick'),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>'
-    ));
-    register_sidebar(array(
-        'name' => __('فوتر رکوتیک شماره سه', 'recotick'),
-        'id' => 'footer-3',
-        'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون سوم فوتر اضافه کنید.', 'recotick'),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>'
-    ));
+    register_sidebar(
+        array(
+            'name' => __('فوتر رکوتیک شماره یک', 'recotick'),
+            'id' => 'footer-1',
+            'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون اول فوتر اضافه کنید.', 'recotick'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>'
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => __('فوتر رکوتیک شماره دو', 'recotick'),
+            'id' => 'footer-2',
+            'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون دوم فوتر اضافه کنید.', 'recotick'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>'
+        )
+    );
+    register_sidebar(
+        array(
+            'name' => __('فوتر رکوتیک شماره سه', 'recotick'),
+            'id' => 'footer-3',
+            'description' => __('در این بحش شما میتوانید ابزارکهای خودتون رو در ستون سوم فوتر اضافه کنید.', 'recotick'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>'
+        )
+    );
 
-    register_sidebar(array(
-        'name' => __('سایدبار رکوتیک', 'recotick'),
-        'id' => 'sidebar-widget-1',
-        'description' => __('این ویجت برای سایدبار صفحه می باشد', 'recotick'),
-        'before_widget' => '',
-        'after_widget' => ''
-    ));
+    register_sidebar(
+        array(
+            'name' => __('سایدبار رکوتیک', 'recotick'),
+            'id' => 'sidebar-widget-1',
+            'description' => __('این ویجت برای سایدبار صفحه می باشد', 'recotick'),
+            'before_widget' => '',
+            'after_widget' => ''
+        )
+    );
 }
 add_action('widgets_init', 'recotick_register_widget');
 
@@ -153,3 +163,10 @@ function recotick_recent_posts_register_widgets()
 //add image size for recent post widget
 add_image_size('recent-post-image-size', 60, 60, true);
 add_image_size('post-detail-image-size', 400, 250, true);
+
+//dynamic browser tap title
+function recotick_browser_tap_title()
+{
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'recotick_browser_tap_title');
