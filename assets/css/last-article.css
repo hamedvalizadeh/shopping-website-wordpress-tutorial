@@ -1,6 +1,6 @@
 .last-article {
-    height       : 340px;
-    margin-top   : 20px;
+    height    : 340px;
+    margin-top: 20px;
 }
 
 .last-article-head-container {
@@ -58,8 +58,9 @@
 }
 
 .last-article-item-container>a>div>img {
-    margin   : 10px;
-    max-width: 100%;
+    margin: 10px;
+    width : 216px;
+    height: 144px;
 }
 
 .last-article-item-container>a>div>h3 {

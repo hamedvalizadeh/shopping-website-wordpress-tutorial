@@ -109,7 +109,7 @@ class Recotick_Recent_Posts_Widget extends WP_Widget
             <?php
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 1
+                'posts_per_page' => $number
             );
             $qry = new WP_Query($args);
             if ($qry->have_posts()) {
