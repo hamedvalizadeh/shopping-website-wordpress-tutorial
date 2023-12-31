@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/page-content.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/page-aside.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/post.css" />
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/comments.css">
 </head>
 
 <body>
@@ -51,11 +52,13 @@
         <p>
           <?php the_content(); ?>
         </p>
-
-        <br />
       </div>
     </section>
+    
     <?php get_sidebar('pgeaside'); ?>
+    <section class="page-content recotic-comment">
+      <?php comments_template(); ?>
+    </section>
   </div>
 
   <?php get_footer('foot'); ?>

@@ -69,6 +69,7 @@ div .content-category-item {
 
 .product-content .navigation {
     text-align: center;
+    direction : ltr;
 }
 
 .product-content #news-pagination {
