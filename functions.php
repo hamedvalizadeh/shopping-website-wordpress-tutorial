@@ -176,16 +176,6 @@ function recotick_browser_tap_title()
 add_action('after_setup_theme', 'recotick_browser_tap_title');
 
 //pagination
-// function zeroize_page_numbers($link, $i)
-// {
-//     $zeroised = zeroise($i, 2);
-
-//     $link = str_replace($i, $zeroised, $link);
-
-//     return $link;
-// }
-// add_filter('number_post_nav', 'zeroize_page_numbers', 10, 2);
-
 function recotik_numeric_post_nav()
 {
     if (is_singular())
@@ -233,3 +223,10 @@ function recotik_numeric_post_nav()
     }
     echo '</ul>' . "\n";
 }
+
+//support theme with woocommerce
+function recotik_woocommerce_support()
+{
+    add_theme_support('woocommerce');
+}
+add_action('after_setup_theme', 'recotik_woocommerce_support');

@@ -43,7 +43,9 @@
         }
         ?>
         <div class="clear"></div>
-        <div class="navigation" ><?php recotik_numeric_post_nav();?></div>
+        <div class="navigation">
+          <?php recotik_numeric_post_nav(); ?>
+        </div>
         <?php
       }
       ?>
