@@ -22,7 +22,8 @@
 
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-    color: #fd2d4f !important;
+    color     : #fd2d4f !important;
+    text-align: center;
 }
 
 .woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(2) {
@@ -30,7 +31,7 @@
 }
 
 .woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
-    width        : 25%;
+    width        : calc(33% - 20px);
     display      : inline-block;
     box-shadow   : 0 0 5px #e7e7e7;
     border-radius: 10px;
@@ -42,6 +43,66 @@
     display      : block;
     width        : 100%;
     height       : auto;
-    box-shadow   : none;
+    box-shadow   : 0 0 5px #e7e7e7;
     border-radius: 10px;
+}
+
+.woocommerce div.product form.cart {
+    margin-bottom: 2em;
+    text-align   : center;
+}
+
+.woocommerce div.product form.cart .button {
+    vertical-align: middle;
+    float         : none;
+    background    : linear-gradient(90deg, #6a6aff, #1e1eff);
+    box-shadow    : 0 0 10px rgba(30, 30, 255, 48%);
+    width         : 50%;
+    height        : 58px;
+    border-radius : 10px;
+    margin        : 20px auto;
+    font-family   : KalamehWeb;
+    font-weight   : 400;
+}
+
+.tagged_as>a,
+.posted_in>a {
+    color: #6a6aff;
+}
+
+.onsale {
+    background: linear-gradient(222deg, #f72121, #ffa6a6);
+    box-shadow: 0 0 10px #ffa6a6;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    border          : 1px solid #1e1eff;
+    margin          : 5px 0px 5px 10px;
+    border-radius   : 10px;
+    background-color: white;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    color: #1e1eff;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: linear-gradient(90deg, #6a6aff, #1e1eff);
+    border    : none;
+    color     : white;
+    box-shadow      : 0 0 5px rgba(30, 30, 255, 48%);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+    border-bottom: 2px solid #6a6aff;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after {
+    display: none
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    padding-right: 0;
 }
