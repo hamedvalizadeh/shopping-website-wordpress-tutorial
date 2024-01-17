@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/header.css" />
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/footer.css" />ّ
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/bread-crumb.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/page-content.css" />
+    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/cat-content.css" />
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/page-aside.css" />
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/woocommerce.css">
 </head>
@@ -20,7 +20,7 @@
             <?php if (function_exists('rank_math_the_breadcrumbs'))
                 rank_math_the_breadcrumbs(); ?>
         </div>
-        <section class="page-content woocommerce">
+        <section class="cat-content woocommerce">
             <p class="page-description">
                 <?php woocommerce_content(); ?>
             </p>
