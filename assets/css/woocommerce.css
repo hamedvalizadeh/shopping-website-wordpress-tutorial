@@ -31,7 +31,7 @@
 }
 
 .woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
-    width        : calc(33% - 20px);
+    /* width        : calc(33% - 30px); */
     display      : inline-block;
     box-shadow   : 0 0 5px #e7e7e7;
     border-radius: 10px;
@@ -90,7 +90,7 @@
     background: linear-gradient(90deg, #6a6aff, #1e1eff);
     border    : none;
     color     : white;
-    box-shadow      : 0 0 5px rgba(30, 30, 255, 48%);
+    box-shadow: 0 0 5px rgba(30, 30, 255, 48%);
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs::after,
@@ -105,4 +105,104 @@
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
     padding-right: 0;
+}
+
+.woocommerce div.product .woocommerce-product-gallery--columns-4 .flex-control-thumbs li {
+    margin-top : 20px;
+    margin-left: 10px;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+    width     : calc(33% - 30px);
+    float     : right;
+    margin    : 20px 0 0 10px;
+    list-style: none;
+}
+
+.woocommerce-Tabs-panel--description>h2,
+.woocommerce-Tabs-panel--additional_information>h2,
+.woocommerce-Reviews>div>h2,
+.related.products>h2 {
+    font-weight  : bold;
+    font-size    : 20px;
+    color        : #444444;
+    margin-bottom: 10px;
+}
+
+/* comments */
+.page-content p {
+    color      : #8d8d8d;
+    font-size  : 16px;
+    text-align : justify;
+    line-height: 1.5;
+    margin-top : 20px;
+}
+
+.comment-form-comment textarea {
+    width        : 100%;
+    outline      : none;
+    border       : 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding      : 10px;
+    font-family  : KalamehWeb !important;
+}
+
+.comment-form-comment textarea:focus {
+    background-color: #FAFAFA;
+    border          : 1px solid #cacaca;
+}
+
+.comment-form-comment label {
+    display: inline-block;
+}
+
+.comment-form input[type=text],
+.comment-form input[type=email] {
+    width        : 100%;
+    outline      : none;
+    border       : 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding      : 10px;
+    font-family  : KalamehWeb !important;
+}
+
+.comment-form input[type=text]:focus {
+    background-color: #FAFAFA;
+    border          : 1px solid #cacaca;
+}
+
+.comment-form p:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+    display: inline-block;
+    width  : 49%;
+}
+
+.comment-form label {
+    display   : inline-block;
+    text-align: right !important;
+}
+
+.form-submit {
+    width: 100% !important;
+}
+
+.form-submit input[type=submit] {
+    border       : none !important;
+    color        : white !important;
+    height       : 38px !important;
+    font-size    : 20px !important;
+    width        : 100%;
+    background   : linear-gradient(90deg, #6a6aff, #1e1eff) !important;
+    border-radius: 10px !important;
+    line-height  : 38px !important;
+    text-align   : center;
+    display      : inline-block !important;
+    box-shadow   : 0 0 5px #1e1eff !important;
+    margin-bottom: 15px !important;
+    font-family  : KalamehWeb !important;
+    padding      : 0px !important;
+}
+
+.comment-form-cookies-consent {
+    display: block !important;
+    width  : 100% !important;
 }
