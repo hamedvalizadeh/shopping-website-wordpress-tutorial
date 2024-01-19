@@ -1,0 +1,311 @@
+# Translation of Plugins - WooCommerce - Stable (latest release) in Persian
+# This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-18 11:33+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: fa_IR\n"
+"Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
+"Language-Team: فارسی"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Total"
+msgstr "جمع کل"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Proceed to Checkout"
+msgstr "ادامه و پرداخت"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Save %s"
+msgstr "تخفیف %s"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Remove item"
+msgstr "حذف"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Add a coupon"
+msgstr "افزودن کد تخفیف"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Free shipping"
+msgstr "ارسال رایگان"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Shipping to %s"
+msgstr "حمل و نقل به %s"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Change address"
+msgstr "تغییر آدرس"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Product"
+msgstr "محصول"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Cart totals"
+msgstr "پیش فاکتور"
+
+#: templates/cart/cart-totals.php:30 templates/cart/cart-totals.php:31
+#: templates/cart/cart.php:33 templates/cart/cart.php:144
+#: templates/checkout/review-order.php:24
+#: templates/checkout/review-order.php:56
+#: packages/woocommerce-blocks/build/blocks-checkout.js:1
+#: packages/woocommerce-blocks/build/blocks-components.js:6
+#: packages/woocommerce-blocks/build/legacy-template.js:7
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-frontend.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents-block/footer-style.js:1
+#: packages/woocommerce-blocks/build/mini-cart-contents.js:13
+msgid "Details"
+msgstr "جزئیات"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/contact-information-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "We'll use this email to send you details and updates about your order."
+msgstr "از این آدرس ایمیل برای ارسال جزئیات و تغییرات سفارش شما استفاده میکنیم."
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/contact-information-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Email address"
+msgstr "آدرس ایمیل"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/contact-information-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Contact information"
+msgstr "اطلاعات تماس"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/contact-information-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Shipping address"
+msgstr "آدرس حمل و نقل"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/shipping-address-frontend.js:3
+#: packages/woocommerce-blocks/build/checkout.js:2
+msgid "Enter the address where you want your order delivered."
+msgstr "آدرسی را که می خواهد سفارش شما به آن ارسال شود وارد نمایید."
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout.js:2
+msgid "Apartment, suite, etc. (optional)"
+msgstr "آپارتمان, واحد, و غیره (اختیاری)"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout.js:2
+msgid "Phone (optional)"
+msgstr "تلفن (اختیاری)"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/shipping-address-frontend.js:3
+#: packages/woocommerce-blocks/build/checkout.js:2
+msgid "Use same address for billing"
+msgstr "از همین آدرس برای فاکتور استفاده شود"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/assets/js/blocks/checkout/inner-blocks/checkout-shipping-methods-block/no-shipping-placeholder/index.js:18
+#: packages/woocommerce-blocks/build/cart-blocks/cart-order-summary-frontend.js:12
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-coupon-form-frontend.js:12
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-discount-frontend.js:12
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-shipping-frontend.js:12
+#: packages/woocommerce-blocks/build/cart.js:29
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-coupon-form-frontend.js:12
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-discount-frontend.js:12
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:12
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-shipping-frontend.js:12
+#: packages/woocommerce-blocks/build/checkout-blocks/shipping-methods-frontend.js:5
+#: packages/woocommerce-blocks/build/checkout.js:13
+#: packages/woocommerce-blocks/build/checkout.js:19
+msgid "Shipping options"
+msgstr "روش های ارسال"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/payment-frontend.js:6
+#: packages/woocommerce-blocks/build/checkout.js:19
+msgid "Payment options"
+msgstr "روش های پرداخت"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/order-note-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Add a note to your order"
+msgstr "یادداشتی به سفارش خود اضافه کنید"
+
+#. translators: %1$s terms page link, %2$s privacy page link.
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/assets/js/blocks/checkout/inner-blocks/checkout-terms-block/constants.js:23
+#: packages/woocommerce-blocks/build/checkout-blocks/terms-frontend.js:2
+#: packages/woocommerce-blocks/build/checkout.js:3
+msgid "By proceeding with your purchase you agree to our %1$s and %2$s"
+msgstr "با ادامه خرید با %1$s و %2$s ما موافق هستید"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/actions-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Return to Cart"
+msgstr "بازگشت به سبد خرید"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/actions-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Place Order"
+msgstr "ثبت سفارش"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-cart-items-frontend.js:5
+#: packages/woocommerce-blocks/build/checkout.js:24
+msgid "Order summary"
+msgstr "خلاصه سفارش"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/assets/js/blocks/checkout/inner-blocks/checkout-terms-block/constants.js:15
+#: packages/woocommerce-blocks/assets/js/blocks/checkout/inner-blocks/checkout-terms-block/constants.js:19
+#: packages/woocommerce-blocks/build/checkout-blocks/terms-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:2
+#: includes/admin/settings/class-wc-settings-accounts.php:139
+#: includes/customizer/class-wc-shop-customizer.php:767
+#: includes/customizer/class-wc-shop-customizer.php:817
+msgid "Privacy Policy"
+msgstr "سیاست حفظ حریم خصوصی"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/assets/js/blocks/checkout/inner-blocks/checkout-terms-block/constants.js:8
+#: packages/woocommerce-blocks/assets/js/blocks/checkout/inner-blocks/checkout-terms-block/constants.js:12
+#: packages/woocommerce-blocks/build/checkout-blocks/terms-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:2
+#: includes/admin/settings/class-wc-settings-advanced.php:124
+#: includes/customizer/class-wc-shop-customizer.php:768
+#: includes/customizer/class-wc-shop-customizer.php:772
+#: includes/customizer/class-wc-shop-customizer.php:829
+#: includes/wc-template-functions.php:953
+#: includes/admin/class-wc-admin-post-types.php:911
+msgid "Terms and Conditions"
+msgstr "شرایط و ضوابط"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: includes/class-wc-checkout.php:265
+#: packages/woocommerce-blocks/build/checkout-blocks/order-note-frontend.js:1
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Notes about your order, e.g. special notes for delivery."
+msgstr "یادداشت‌ها درباره سفارش شما، برای مثال نکات مهم درباره نحوه تحویل سفارش"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+msgid "Billing address"
+msgstr "آدرس صورتحساب"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/billing-address-frontend.js:3
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Enter the billing address that matches your payment method."
+msgstr "آدرس فاکتور که با آدرس پرداخت مطابقت دارد وارد نمایید."
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/billing-address-frontend.js:3
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Enter the billing and shipping address that matches your payment method."
+msgstr "آدرس فاکتور و ارسال که با آدرس پرداخت مطابقت دارد وارد نمایید."
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: src/Internal/Features/ProductBlockEditor/ProductTemplates/SimpleProductTemplate.php:268
+msgid "Enter the external URL to the product"
+msgstr "آدرس وب سایت بیرونی محصول را وارد کنید."
