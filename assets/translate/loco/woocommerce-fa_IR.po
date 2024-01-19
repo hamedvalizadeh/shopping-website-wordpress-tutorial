@@ -309,3 +309,46 @@ msgstr "آدرس فاکتور و ارسال که با آدرس پرداخت مط
 #: src/Internal/Features/ProductBlockEditor/ProductTemplates/SimpleProductTemplate.php:268
 msgid "Enter the external URL to the product"
 msgstr "آدرس وب سایت بیرونی محصول را وارد کنید."
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/cart-blocks/cart-order-summary-frontend.js:7
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-coupon-form-frontend.js:7
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-discount-frontend.js:7
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-shipping-frontend.js:7
+#: packages/woocommerce-blocks/build/cart.js:20
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-coupon-form-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-discount-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-shipping-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout.js:4
+msgid "Enter code"
+msgstr "کد را وارد کنید"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#. translators: Submit button text for filters.
+#: includes/admin/meta-boxes/class-wc-meta-box-order-actions.php:56
+#: includes/widgets/class-wc-widget-layered-nav.php:288
+#: packages/woocommerce-blocks/build/attribute-filter-frontend.js:6
+#: packages/woocommerce-blocks/build/attribute-filter-wrapper-frontend.js:6
+#: packages/woocommerce-blocks/build/attribute-filter.js:11
+#: packages/woocommerce-blocks/build/cart-blocks/cart-order-summary-frontend.js:7
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-coupon-form-frontend.js:7
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-discount-frontend.js:7
+#: packages/woocommerce-blocks/build/cart-blocks/order-summary-shipping-frontend.js:7
+#: packages/woocommerce-blocks/build/cart.js:20
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-coupon-form-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-discount-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout-blocks/order-summary-shipping-frontend.js:7
+#: packages/woocommerce-blocks/build/checkout.js:4
+#: packages/woocommerce-blocks/build/price-filter-frontend.js:3
+#: packages/woocommerce-blocks/build/price-filter-wrapper-frontend.js:5
+#: packages/woocommerce-blocks/build/price-filter.js:3
+#: packages/woocommerce-blocks/build/rating-filter-frontend.js:5
+#: packages/woocommerce-blocks/build/rating-filter-wrapper-frontend.js:5
+#: packages/woocommerce-blocks/build/rating-filter.js:5
+#: packages/woocommerce-blocks/build/stock-filter-frontend.js:3
+#: packages/woocommerce-blocks/build/stock-filter-wrapper-frontend.js:6
+#: packages/woocommerce-blocks/build/stock-filter.js:3
+msgid "Apply"
+msgstr "اعمال کردن"
