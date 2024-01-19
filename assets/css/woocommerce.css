@@ -267,6 +267,25 @@ ul.products.columns-4 li>a>img {
     line-height  : 35px;
 }
 
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.added {
+    display: none !important;
+}
+
+.added_to_cart.wc-forward {
+    position     : absolute;
+    margin       : auto;
+    bottom       : 5px;
+    height       : 35px;
+    width        : 165px;
+    background   : linear-gradient(90deg, #ff9090, #ff4949) !important;
+    color        : white;
+    border-radius: 10px;
+    right        : 23.5px;
+    padding      : 0px !important;
+    text-align   : center;
+    line-height  : 35px;
+}
+
 .woocommerce .woocommerce-ordering select {
     vertical-align: top;
     font-family   : 'KalamehWeb';

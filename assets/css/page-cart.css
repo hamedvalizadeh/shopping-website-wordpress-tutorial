@@ -1,0 +1,75 @@
+.components-button.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained {
+    background   : linear-gradient(90deg, #6a6aff, #1e1eff) !important;
+    color        : white;
+    border-radius: 10px;
+    text-align   : center;
+}
+
+.wc-block-components-totals-coupon-link {
+    text-align   : center;
+    background   : linear-gradient(90deg, #ff9090, #ff4949) !important;
+    border-radius: 10px;
+    color        : white;
+    width        : 100%;
+    display      : inline-block;
+}
+
+.wc-block-components-product-badge {
+    border        : 1px solid #fcc8 !important;
+    border-radius : 4px;
+    display       : inline-block;
+    font-size     : .75em;
+    font-weight   : 600;
+    padding       : 0 .66em;
+    text-transform: uppercase;
+    white-space   : nowrap;
+    color         : #bfbfbf;
+    padding       : 4px !important;
+    margin-top    : 5px;
+}
+
+.wc-block-cart-item__prices .wc-block-components-product-price {
+    display   : block;
+    font-size : 12px;
+    margin-top: 5px;
+    color     : #4d4d4d;
+}
+
+.wc-block-cart-item__prices .wc-block-components-product-price .wc-block-cart-item__total-price-and-sale-badge-wrapper {
+    display  : block;
+    font-size: 15px;
+}
+
+.wc-block-components-product-metadata .wc-block-components-product-metadata__description {
+    display: none;
+}
+
+.wc-block-components-quantity-selector {
+    display    : inline-flex !important;
+    margin-left: 5px !important;
+}
+
+.wc-block-cart-item__remove-link {
+    color           : red !important;
+    text-decoration : none !important;
+    background-color: red !important;
+    font-family     : 'KalamehWeb' !important;
+    border-radius   : 100% !important;
+    width           : 20px !important;
+    height          : 20px !important;
+    font-size       : 0px !important;
+    position        : relative;
+}
+
+.wc-block-cart-item__remove-link::after {
+    content            : '';
+    position           : absolute;
+    width              : 10px;
+    height             : 10px;
+    background         : url('../icn/remove-20.png');
+    background-position: center;
+    background-size    : cover;
+    left               : 50%;
+    top                : 50%;
+    transform          : translate(-50%, -50%);
+}
