@@ -244,3 +244,38 @@ function recotik_chnage_price_location_for_simple_prodect()
 }
 
 add_action('woocommerce_before_single_product', 'recotik_chnage_price_location_for_simple_prodect');
+
+//my-account navigation menu
+function edit_my_account_menu($menu_name)
+{
+    $menu_name['orders'] = "سفارشات";
+    $menu_name['downloads'] = "دانلودهای من";
+    return $menu_name;
+}
+
+add_filter('woocommerce_account_menu_items', 'edit_my_account_menu');
+
+function add_menu_item_my_account($menu_item)
+{
+    $menu_item = array_slice($menu_item, 0, 5, true)
+        + array('recotik_doreha' => 'دوره های خریداری شده')
+        + array_slice($menu_item, 5, null, true);
+
+    return $menu_item;
+}
+
+add_filter('woocommerce_account_menu_items', 'add_menu_item_my_account');
+
+function menu_add_endpoint()
+{
+    add_rewrite_endpoint('recotik_doreha', EP_PAGES);
+}
+
+add_action('init', 'menu_add_endpoint');
+
+function content_my_account()
+{
+    echo 'هنوز خریداری نشده';
+}
+
+add_action('woocommerce_account_recotik_doreha_endpoint', 'content_my_account');
