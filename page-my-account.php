@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/bread-crumb.css" />
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/page-content.css" />
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/page-aside.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/page-checkout.css">
+    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/page-my-account.css">
     </link>
 </head>
 

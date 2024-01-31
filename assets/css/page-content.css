@@ -30,3 +30,7 @@
     line-height: 1.5;
     margin-top : 20px;
 }
+
+.page-content-full {
+    width: calc(100% - 40px);
+}

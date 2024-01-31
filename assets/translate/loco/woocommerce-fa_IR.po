@@ -352,3 +352,9 @@ msgstr "کد را وارد کنید"
 #: packages/woocommerce-blocks/build/stock-filter.js:3
 msgid "Apply"
 msgstr "اعمال کردن"
+
+#: packages/woocommerce-blocks/build/wc-settings.js:1
+#: packages/woocommerce-blocks/build/checkout-blocks/shipping-methods-frontend.js:5
+#: packages/woocommerce-blocks/build/checkout.js:19
+msgid "Add a shipping address to view shipping options."
+msgstr "یک آدرس ارسال برای مشاهده گزینه ها اضافه کنید."
