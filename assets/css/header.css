@@ -82,3 +82,42 @@ header {
     transform: translateY(-50%);
     right    : 45px;
 }
+
+.user-drop {
+    display      : inline-block;
+    width        : 156px;
+    background   : white;
+    box-shadow   : 0 0 5px #9f9f9f;
+    border-radius: 10px;
+    position     : absolute;
+    z-index      : 1000;
+    left         : 152px;
+    top          : 65px;
+    visibility   : hidden;
+}
+
+.user-drop>ul>li>a {
+    padding: 7px;
+    display: block;
+    color  : #707070;
+}
+
+.user-drop>ul>li>a:hover {
+    background-color: #c9c9c9;
+    color           : #474747;
+    padding-right   : 15px;
+}
+
+.user-drop>ul>li>a:first-child:hover {
+    border-radius: 10px 10px 0 0;
+}
+
+.user-drop>ul>li>a:last-child:hover {
+    border-radius: 0 0 10px 10px;
+}
+
+.user-drop:hover,
+.user-box-container:hover .user-drop {
+    opacity   : 1 !important;
+    visibility: visible !important;
+}
