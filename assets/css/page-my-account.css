@@ -1,6 +1,24 @@
+/* 
+--HINT: equal result with grid but with float property.
+div.woocommerce>.woocommerce-MyAccount-navigation {
+    box-shadow      : 0 0 5px rgb(149, 149, 149);
+    border-radius   : 10px;
+    float           : right;
+    display         : inline;
+    width           : 20%;
+}
+
+div.woocommerce>.woocommerce-MyAccount-content {
+    float  : left;
+    display: inline;
+    width  : calc(80% - 10px);
+} 
+*/
+
 div.woocommerce {
-    display: grid;
-    grid-template-areas:
+    display              : grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-areas  :
         'navigation content content';
     gap: 10px;
 }
@@ -9,7 +27,6 @@ div.woocommerce>.woocommerce-MyAccount-navigation {
     grid-area    : navigation;
     box-shadow   : 0 0 5px rgb(149, 149, 149);
     border-radius: 10px;
-    width        : 300px;
 }
 
 div.woocommerce>.woocommerce-MyAccount-content {
@@ -17,7 +34,6 @@ div.woocommerce>.woocommerce-MyAccount-content {
 }
 
 div.woocommerce>div {
-    border-right : 2px solid rgb(161, 161, 161);
     padding-right: 10px;
 }
 
