@@ -1,20 +1,5 @@
 /* 
---HINT: equal result with grid but with float property.
-div.woocommerce>.woocommerce-MyAccount-navigation {
-    box-shadow      : 0 0 5px rgb(149, 149, 149);
-    border-radius   : 10px;
-    float           : right;
-    display         : inline;
-    width           : 20%;
-}
-
-div.woocommerce>.woocommerce-MyAccount-content {
-    float  : left;
-    display: inline;
-    width  : calc(80% - 10px);
-} 
-*/
-
+--HINT: do the sam design as float but with display grid.
 div.woocommerce {
     display              : grid;
     grid-template-columns: 300px auto auto;
@@ -31,6 +16,25 @@ div.woocommerce>.woocommerce-MyAccount-navigation {
 
 div.woocommerce>.woocommerce-MyAccount-content {
     grid-area: content;
+} */
+
+div.woocommerce>.woocommerce-MyAccount-navigation {
+    box-shadow   : 0 0 5px rgb(149, 149, 149);
+    border-radius: 10px;
+    float        : right;
+    display      : inline;
+    width        : 20%;
+}
+
+div.woocommerce>.woocommerce-MyAccount-content {
+    float  : left;
+    display: inline;
+    width  : calc(80% - 10px);
+}
+
+.woocommerce form .show-password-input::after,
+.woocommerce-page form .show-password-input::after {
+    line-height: 0 !important;
 }
 
 div.woocommerce>div {
