@@ -38,6 +38,21 @@ header {
     background-position: center;
 }
 
+.basket-count {
+    background-color: #FF4E4E;
+    box-shadow      : 0 0 5px #f81d1d;
+    padding         : 7px;
+    display         : inline-block;
+    color           : white;
+    border-radius   : 100%;
+    line-height     : 11px;
+    margin          : 25px 30px;
+    font-size       : 11px;
+    width           : 8px;
+    height          : 8px;
+    text-align      : center;
+}
+
 .btn-register {
     width              : 156px;
     height             : 55px;
