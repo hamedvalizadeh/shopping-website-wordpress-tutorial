@@ -31,7 +31,7 @@
     box-shadow      : 0 0 15px #d4d4d4;
     position        : absolute;
     visibility      : hidden;
-    z-index: 999;
+    z-index         : 999;
 }
 
 .main-menu ul li ul li a {
@@ -53,4 +53,64 @@
     right   : 100%;
     top     : 0;
     position: absolute;
+}
+
+.dropdown-cart {
+    width           : 300px;
+    box-shadow      : 0 0 5px #404040;
+    background-color: white;
+    position        : absolute;
+    z-index         : 1000;
+    left            : 10px;
+    top             : 72px;
+    padding         : 5px;
+    border-radius   : 10px;
+}
+
+.dropdown-cart ul li {
+    border-bottom : 1px solid #e5e5e5;
+    margin-bottom : 5px;
+    padding-bottom: 5px;
+}
+
+.dropdown-cart ul li a:nth-child(2) {
+    position   : relative;
+    display    : block;
+    height     : 30px;
+    line-height: 30px;
+}
+
+.dropdown-cart ul li a:nth-child(2)>img {
+    position     : absolute;
+    left         : 0;
+    border-radius: 10px;
+}
+
+.dropdown-cart ul li a img {
+    width : 30px;
+    height: 30px;
+}
+
+.dropdown-cart ul li a:first-child {
+    color           : red !important;
+    background-color: red !important;
+    border-radius   : 100% !important;
+    width           : 20px !important;
+    height          : 20px !important;
+    font-size       : 0px !important;
+    position        : relative;
+    display         : block;
+}
+
+.dropdown-cart ul li a:first-child::after {
+    content            : '';
+    position           : absolute;
+    width              : 10px;
+    height             : 10px;
+    background         : url('../icn/remove-20.png');
+    background-position: center;
+    background-size    : cover;
+    left               : 50%;
+    top                : 50%;
+    transform          : translate(-50%, -50%);
 }

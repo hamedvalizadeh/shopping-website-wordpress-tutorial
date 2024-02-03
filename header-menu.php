@@ -9,6 +9,9 @@
             <?php
         } ?>
     </a>
+    <div class="dropdown-cart">
+        <?php woocommerce_mini_cart(); ?>
+    </div>
     <?php
     $my_account_page_link = get_permalink(get_option('woocommerce_myaccount_page_id'));
     global $current_user;
