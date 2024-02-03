@@ -102,6 +102,10 @@ header {
     color  : #707070;
 }
 
+.user-drop>ul>li>a>i {
+    margin-left: 10px;
+}
+
 .user-drop>ul>li>a:hover {
     background-color: #c9c9c9;
     color           : #474747;

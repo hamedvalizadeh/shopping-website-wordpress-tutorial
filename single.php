@@ -3,8 +3,7 @@
 <head>
   <?php get_header('head'); ?>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/style.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/menu.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/header.css" />
+  <?php get_header('head-style'); ?>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/footer.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/bread-crumb.css" />
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/page-content.css" />

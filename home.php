@@ -3,8 +3,7 @@
 <head>
     <?php get_header('head'); ?>
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/style.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/menu.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/header.css" />
+    <?php get_header('head-style'); ?>
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/slider.css" />
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/discount-box.css" />

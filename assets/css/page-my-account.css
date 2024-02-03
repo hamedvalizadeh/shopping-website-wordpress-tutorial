@@ -52,7 +52,15 @@ div.woocommerce>div {
     padding-right   : 10px;
 }
 
+.woocommerce-MyAccount-navigation ul li::before {
+    color: #4ce7e7;
+}
+
 .woocommerce-MyAccount-navigation ul li:hover a {
+    color: white !important;
+}
+
+.woocommerce-MyAccount-navigation ul li:hover::before {
     color: white !important;
 }
 
@@ -79,4 +87,39 @@ div.woocommerce>div {
     border-radius   : 10px 10px 0 0;
     padding         : 20px;
     text-align      : center;
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--dashboard::before {
+    content: '\f624';
+    font   : var(--fa-font-solid);
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--orders::before {
+    content: "\f291";
+    font   : var(--fa-font-solid);
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--customer-logout::before {
+    content: '\f08b';
+    font   : var(--fa-font-solid);
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-account::before {
+    content: '\f4ff';
+    font   : var(--fa-font-solid);
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads::before {
+    content: '\f019';
+    font   : var(--fa-font-solid);
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--edit-address::before {
+    content: '\f601';
+    font   : var(--fa-font-solid);
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--recotik_doreha::before {
+    content: '\f19d';
+    font   : var(--fa-font-solid);
 }

@@ -26,10 +26,14 @@
             <div class="user-drop">
                 <ul>
                     <li>
-                        <a href="<?php echo $my_account_page_link; ?>">داشبورد کاربری</a>
-                        <a href="<?php echo wc_get_page_permalink('myaccount'); ?>orders/">سفارش ها</a>
-                        <a href="<?php echo wc_get_page_permalink('myaccount'); ?>edit-account/">ویرایش حساب</a>
-                        <a href="<?php echo wc_logout_url(); ?>">خروج</a>
+                        <a href="<?php echo $my_account_page_link; ?>"><i class="fa-solid fa-gauge"></i><span>داشبورد
+                                کاربری</span></a>
+                        <a href="<?php echo wc_get_page_permalink('myaccount'); ?>orders/">
+                            <i class="fa-solid fa-basket-shopping"></i><span>سفارش ها</span></a>
+                        <a href="<?php echo wc_get_page_permalink('myaccount'); ?>edit-account/"><i
+                                class="fa-solid fa-user-pen"></i><span>ویرایش حساب</span></a>
+                        <a href="<?php echo wc_logout_url(); ?>"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i><span>خروج</span></a>
                     </li>
                 </ul>
             </div>
