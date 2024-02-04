@@ -85,93 +85,124 @@
             </a>
         </div>
         <div class="discount-box swiper discount-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="discount-column product-image">
-                        <span class="discount-percent">10%</span>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/discount-product.png" alt="" />
-                    </div>
-                    <div class="discount-column content">
-                        <div class="product-prices">
-                            <span class="regular-price">2,000,000 تومان</span>
-                            <span class="discount-price">1,800,000 تومان</span>
+            <div class="swiper-wrapper swipper-countdown-slider">
+                <?php
+                $args1 = array(
+                    'post_type' => 'product',
+                    'posts_per_page' => -1,
+                    'post_status' => 'publish'
+                );
+                $args = array(
+                    'post_type' => 'product',
+                    'posts_per_page' => -1,
+                    'meta_query' => array(
+                        'relation' => 'OR',
+                        array( // Simple products type
+                            'key' => '_sale_price',
+                            'value' => 0,
+                            'compare' => '>',
+                            'type' => 'numeric'
+                        ),
+                        array( // Variable products type
+                            'key' => '_min_variation_sale_price',
+                            'value' => 0,
+                            'compare' => '>',
+                            'type' => 'numeric'
+                        )
+                    )
+                );
+                $qry = new WP_Query($args);
+                if ($qry->have_posts()) {
+                    while ($qry->have_posts()) {
+                        $qry->the_post();
+                        global $product;
+                        $regular_price = (float) $product->get_regular_price(); // Regular price
+                        $sale_price = (float) $product->get_sale_price(); // Active price
+                        $precision = 1; // Max number of decimals
+                        $saving_percentage = round(100 - ($sale_price / $regular_price * 100), $precision) . '%';
+
+                        $sale_date = get_post_meta($product->get_id(), '_sale_price_dates_to', true);
+                        ?>
+                        <div class="swiper-slide discount-item">
+                            <div class="discount-column product-image">
+                                <span class="discount-percent">
+                                    <?php echo $saving_percentage; ?>
+                                </span>
+                                <a target="_blank" href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail(); ?>
+                                </a>
+                            </div>
+                            <div class="discount-column content">
+                                <div class="product-prices">
+                                    <span class="regular-price">
+                                        <?php echo wc_price(wc_get_price_to_display($product, array('price' => $product->get_regular_price()))); ?>
+                                    </span>
+                                    <span class="discount-price">
+                                        <?php echo wc_price(wc_get_price_to_display($product, array('price' => $product->get_sale_price()))); ?>
+                                    </span>
+                                </div>
+                                <h2 class="product-title">
+                                    <a target="_blank" href="<?php the_permalink(); ?>">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </h2>
+                                <div class="product-short-description">
+                                    <?php echo $product->short_description; ?>
+                                </div>
+                            </div>
+                            <div class="discount-column suggest-time">
+                                <div class="text-suggest-time">
+                                    <span class="wonderfull-suggest">پیشنهاد شگفت انگیز</span>
+                                    <?php
+                                    if (strlen($sale_date) > 0) {
+                                        ?>
+                                        <span class="until-time">فرصت باقی مانده</span>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <span class="until-time">زمان نامحدود</span>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+                                <?php
+                                if (strlen($sale_date) > 0) {
+                                    ?>
+                                    <div class="suggest-count-down-time sales-timer-display"
+                                        date-to="<?php echo ((strlen($sale_date) > 0) ? (date('Y-m-d', $sale_date)) : '000-00-00'); ?>">
+                                        <div class="day">
+                                            <span class="no remain-days"></span>
+                                            <span class="txt">روز</span>
+                                        </div>
+                                        <div class="hour">
+                                            <span class="no remain-hours"></span>
+                                            <span class="txt">ساعت</span>
+                                        </div>
+                                        <div class="minute">
+                                            <span class="no remain-minutes"></span>
+                                            <span class="txt">دقیقه</span>
+                                        </div>
+                                        <div class="second">
+                                            <span class="no remain-seconds"></span>
+                                            <span class="txt">ثانیه</span>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                            </div>
                         </div>
-                        <h2 class="product-title">سنسور دما و رطوبت سری (( ای 50 ))</h2>
-                        <p class="product-short-description">
-                            اندازه گیری دما <br />
-                            اندازه گیری رطوبت <br />
-                            ارسال اطلاعات به صورت زنده <br />
-                            امکان باز آوری داده ها در زمان نبود اتصال شبکه
-                        </p>
+                        <?php
+                    }
+                } else {
+                    ?>
+                    <div class="swiper-slide">
+                        <img src="<?php bloginfo("template_url") ?>/assets/img/home-slider-1.png" alt="" />
                     </div>
-                    <div class="discount-column suggest-time">
-                        <div class="text-suggest-time">
-                            <span class="wonderfull-suggest">پیشنهاد شگفت انگیز</span>
-                            <span class="until-time">فرصت باقی مانده</span>
-                        </div>
-                        <div class="suggest-count-down-time">
-                            <div class="day">
-                                <span class="no">02</span>
-                                <span class="txt">روز</span>
-                            </div>
-                            <div class="hour">
-                                <span class="no">14</span>
-                                <span class="txt">ساعت</span>
-                            </div>
-                            <div class="minute">
-                                <span class="no">14</span>
-                                <span class="txt">دقیقه</span>
-                            </div>
-                            <div class="second">
-                                <span class="no">43</span>
-                                <span class="txt">ثانیه</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="discount-column product-image">
-                        <span class="discount-percent">20%</span>
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/discount-product.png" alt="" />
-                    </div>
-                    <div class="discount-column content">
-                        <div class="product-prices">
-                            <span class="regular-price">2,000,000 تومان</span>
-                            <span class="discount-price">1,800,000 تومان</span>
-                        </div>
-                        <h2 class="product-title">سنسور دما و رطوبت سری (( ای 50 ))</h2>
-                        <p class="product-short-description">
-                            اندازه گیری دما <br />
-                            اندازه گیری رطوبت <br />
-                            ارسال اطلاعات به صورت زنده <br />
-                            امکان باز آوری داده ها در زمان نبود اتصال شبکه
-                        </p>
-                    </div>
-                    <div class="discount-column suggest-time">
-                        <div class="text-suggest-time">
-                            <span class="wonderfull-suggest">پیشنهاد شگفت انگیز</span>
-                            <span class="until-time">فرصت باقی مانده</span>
-                        </div>
-                        <div class="suggest-count-down-time">
-                            <div class="day">
-                                <span class="no">02</span>
-                                <span class="txt">روز</span>
-                            </div>
-                            <div class="hour">
-                                <span class="no">14</span>
-                                <span class="txt">ساعت</span>
-                            </div>
-                            <div class="minute">
-                                <span class="no">14</span>
-                                <span class="txt">دقیقه</span>
-                            </div>
-                            <div class="second">
-                                <span class="no">43</span>
-                                <span class="txt">ثانیه</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <?php
+                }
+                wp_reset_postdata();
+                ?>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -281,8 +312,10 @@
             </div>
             <div class="authentic-brand-item-container">
                 <?php
-                $arg = array('post_type' => 'brands',
-                    'posts_per_page' => 6);
+                $arg = array(
+                    'post_type' => 'brands',
+                    'posts_per_page' => 6
+                );
                 $qry = new WP_Query($arg);
                 if ($qry->have_posts()) {
                     while ($qry->have_posts()) {

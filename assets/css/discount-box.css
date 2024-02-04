@@ -78,14 +78,15 @@
 
 .product-short-description {
     margin-top : 25px;
-    color      : #3b3b3b;
-    line-height: 2;
+    color      : #9f9f9f;
+    line-height: 1;
     text-align : right;
 }
 
 .suggest-time {
-    width   : 34%;
-    position: relative;
+    width       : calc(34% - 5px);
+    position    : relative;
+    margin-right: 5px;
 }
 
 .text-suggest-time {
@@ -161,8 +162,9 @@
 
 .discount-box.swiper.discount-swiper .swiper-pagination {
     right    : 92% !important;
-    top      : 20% !important;
+    top      : 5% !important;
     direction: ltr;
+    transform: translate3d(0px, 0%, 0);
 }
 
 .discount-box.swiper.discount-swiper .swiper-pagination-bullet {

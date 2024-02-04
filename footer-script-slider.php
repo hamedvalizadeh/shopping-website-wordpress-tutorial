@@ -1,4 +1,9 @@
 <script src="<?php bloginfo("template_url") ?>/assets/js/swiper-bundle.min.js"></script>
+<script src="<?php bloginfo("template_url") ?>/assets/js/jquery.min.js"></script>
+<script src="<?php bloginfo("template_url") ?>/assets/js/jquery.plugin.min.js"></script>
+<script src="<?php bloginfo("template_url") ?>/assets/js/jquery.countdown.js"></script>
+<script src="<?php bloginfo("template_url") ?>/assets/js/recotik.js"></script>
+
 <script>
     var swiper = new Swiper(".first-swiper", {
         loop: true,
@@ -17,7 +22,14 @@
     });
 </script>
 <script>
-    var menu = ["10%", "20%"];
+    var menu = [];
+    $.each($(".discount-swiper .discount-item"), (key, item) => {
+        item = $(item);
+        let discountValue = item.find(".discount-percent");
+        if (discountValue != null && discountValue != undefined && discountValue.length > 0) {
+            menu.push(discountValue.text());
+        }
+    });
     var swiper2 = new Swiper(".discount-swiper", {
         loop: true,
         direction: "vertical",

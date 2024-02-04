@@ -62,7 +62,6 @@
     background-color: white;
     transform       : rotate(45deg);
     display         : block;
-    z-index         : -1;
     top             : -7px;
     position        : absolute;
     left            : 93px;
@@ -75,7 +74,7 @@
     box-shadow      : 0 0 5px #404040;
     background-color: white;
     position        : absolute;
-    z-index         : 1;
+    z-index         : 10;
     left            : 10px;
     top             : 79px;
     padding         : 5px;
