@@ -55,16 +55,32 @@
     position: absolute;
 }
 
+.dropdown-cart::before {
+    content         : "";
+    width           : 15px;
+    height          : 15px;
+    background-color: white;
+    transform       : rotate(45deg);
+    display         : block;
+    z-index         : -1;
+    top             : -7px;
+    position        : absolute;
+    left            : 93px;
+    box-shadow      : 0 0 5px #404040;
+    clip-path       : inset(-5px 1px 1px -9px);
+}
+
 .dropdown-cart {
     width           : 300px;
     box-shadow      : 0 0 5px #404040;
     background-color: white;
     position        : absolute;
-    z-index         : 1000;
+    z-index         : 1;
     left            : 10px;
-    top             : 72px;
+    top             : 79px;
     padding         : 5px;
     border-radius   : 10px;
+    visibility      : hidden;
 }
 
 .dropdown-cart ul li {
@@ -113,4 +129,46 @@
     left               : 50%;
     top                : 50%;
     transform          : translate(-50%, -50%);
+}
+
+.woocommerce-mini-cart__total.total {
+    text-align: center;
+}
+
+.woocommerce-mini-cart__buttons.buttons>a:first-child {
+    margin-top   : 5px;
+    display      : block;
+    right        : 0;
+    background   : linear-gradient(90deg, #6a6aff, #1e1eff) !important;
+    color        : white;
+    border-radius: 5px;
+    text-align   : center;
+    font-family  : KalamehWeb !important;
+    border       : none !important;
+    height       : 30px;
+    line-height  : 30px;
+    text-align   : center;
+    padding      : 0 5px;
+}
+
+.woocommerce-mini-cart__buttons.buttons>a:nth-child(2) {
+    margin-top   : 5px;
+    display      : block;
+    left         : 0;
+    background   : linear-gradient(90deg, #6af5ff, #1effc7) !important;
+    color        : white;
+    border-radius: 5px;
+    text-align   : center;
+    font-family  : KalamehWeb !important;
+    border       : none !important;
+    height       : 30px;
+    line-height  : 30px;
+    text-align   : center;
+    padding      : 0 5px;
+}
+
+.basket-container:hover .dropdown-cart {
+    opacity   : 1 !important;
+    visibility: visible !important;
+    width     : 300px;
 }

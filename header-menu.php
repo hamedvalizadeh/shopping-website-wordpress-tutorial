@@ -1,17 +1,24 @@
 <header>
     <a class="btn-search" href="#"></a>
-    <a class="btn-basket" href="<?php echo wc_get_cart_url(); ?>">
+    <div class="basket-container">
+        <a class="btn-basket" href="<?php echo wc_get_cart_url(); ?>">
+            <?php if (wc()->cart->get_cart_contents_count() > 0) {
+                ?>
+                <span class="basket-count">
+                    <?php echo wc()->cart->get_cart_contents_count(); ?>
+                </span>
+                <?php
+            } ?>
+        </a>
         <?php if (wc()->cart->get_cart_contents_count() > 0) {
             ?>
-            <span class="basket-count">
-                <?php echo wc()->cart->get_cart_contents_count(); ?>
-            </span>
+            <div class="dropdown-cart">
+                <?php woocommerce_mini_cart(); ?>
+            </div>
             <?php
         } ?>
-    </a>
-    <div class="dropdown-cart">
-        <?php woocommerce_mini_cart(); ?>
     </div>
+
     <?php
     $my_account_page_link = get_permalink(get_option('woocommerce_myaccount_page_id'));
     global $current_user;
