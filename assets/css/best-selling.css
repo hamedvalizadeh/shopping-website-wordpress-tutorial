@@ -1,7 +1,7 @@
 .best-selling {
-    display      : block;
-    height       : 270px;
-    margin-top   : 20px;
+    display   : block;
+    height    : 270px;
+    margin-top: 20px;
 }
 
 .best-selling-head-container {
@@ -61,6 +61,9 @@
 .best-selling-item-container span img {
     margin-bottom: 20px;
     margin-top   : 20px;
+    width        : 100px;
+    height       : 100px;
+    border-radius: 10px;
 }
 
 .best-selling-item-container span h4 {

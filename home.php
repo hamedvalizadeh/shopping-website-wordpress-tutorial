@@ -121,17 +121,6 @@
         }
         wp_reset_postdata();
         ?>
-        <!-- <div class="suggest-box">
-            <h3 class="suggest-title">پیشنهاد رکوتیک</h3>
-            <a href="">
-                <img src="<?php bloginfo("template_url") ?>/assets/img/suggest-product.png" alt="" />
-            </a>
-            <h3 class="suggest-product-title">مانیتور وضعیت محلی</h3>
-            <h3 class="suggest-product-price">3,000,000 تومان</h3>
-            <a href="">
-                <span class="suggest-product-detail">افزودن به سبد خرید</span>
-            </a>
-        </div> -->
         <div class="discount-box swiper discount-swiper">
             <div class="swiper-wrapper swipper-countdown-slider">
                 <?php
@@ -266,41 +255,80 @@
                 <h2 class="best-selling-head-title">پر فروش ترین سنسورها</h2>
             </div>
             <div class="best-selling-item-container">
-                <span>
+                <?php
+                $args = array(
+                    'post_type' => 'product',
+                    'posts_per_page' => 5,
+                    'meta_key' => 'total_sales',
+                    'orderby' => 'meta_value_num'
+                );
+                $qry = new WP_Query($args);
+                if ($qry->have_posts()) {
+                    while ($qry->have_posts()) {
+                        $qry->the_post();
+                        global $product;
+                        ?>
+                        <span>
+                            <a href="">
+                                <?php the_post_thumbnail(); ?>
+                                <h4>
+                                    <?php the_title(); ?>
+                                </h4>
+                                <h4>
+                                    <?php echo wc_price(wc_get_price_to_display($product, array('price' => $product->get_regular_price()))); ?>
+                                </h4>
+                            </a>
+                        </span>
+                        <?php
+                    }
+                } else {
+                    ?>
+                    <span>
+                        <a href="">
+                            <img src="<?php bloginfo("template_url") ?>/assets/img/bs1.png" alt="" />
+                            <h4>رطوبت خاک</h4>
+                            <h4>1,100,000 تومان</h4>
+                        </a>
+                    </span>
+                    <?php
+                }
+                wp_reset_postdata();
+                ?>
+                <!-- <span>
                     <a href="">
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/bs1.png" alt="" />
+                        <img src="<php bloginfo("template_url") ?>/assets/img/bs1.png" alt="" />
                         <h4>رطوبت خاک</h4>
                         <h4>1,100,000 تومان</h4>
                     </a>
                 </span>
                 <span>
                     <a href="">
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/bs2.png" alt="" />
+                        <img src="<php bloginfo("template_url") ?>/assets/img/bs2.png" alt="" />
                         <h4>دمای محیط</h4>
                         <h4>1,200,000 تومان</h4>
                     </a>
                 </span>
                 <span>
                     <a href="">
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/bs3.png" alt="" />
+                        <img src="<php bloginfo("template_url") ?>/assets/img/bs3.png" alt="" />
                         <h4>اسیدیته خاک</h4>
                         <h4>1,500,000 تومان</h4>
                     </a>
                 </span>
                 <span>
                     <a href="">
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/bs4.png" alt="" />
+                        <img src="<php bloginfo("template_url") ?>/assets/img/bs4.png" alt="" />
                         <h4>شدت نور</h4>
                         <h4>2,500,000 تومان</h4>
                     </a>
                 </span>
                 <span>
                     <a href="">
-                        <img src="<?php bloginfo("template_url") ?>/assets/img/bs5.png" alt="" />
+                        <img src="<php bloginfo("template_url") ?>/assets/img/bs5.png" alt="" />
                         <h4>دمای خاک</h4>
                         <h4>890,000 تومان</h4>
                     </a>
-                </span>
+                </span> -->
             </div>
         </div>
         <div class="middle-banner">
