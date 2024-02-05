@@ -73,7 +73,55 @@
                 <a href="#"><img src="<?php bloginfo("template_url") ?>/assets/img/banner-4.png" alt="banner" /></a>
             </div>
         </div>
-        <div class="suggest-box">
+        <?php
+        $args = array(
+            'post_type' => 'product',
+            'posts_per_page' => 1,
+            'product_cat_id' => 31,
+            'orderby' => 'rand'
+        );
+        $qry = new WP_Query($args);
+        if ($qry->have_posts()) {
+            while ($qry->have_posts()) {
+                $qry->the_post();
+                global $product;
+                $regular_price = (float) $product->get_regular_price();
+                ?>
+                <div class="suggest-box">
+                    <h3 class="suggest-title">پیشنهاد رکوتیک</h3>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                    <h3 class="suggest-product-title">
+                        <?php the_title(); ?>
+                    </h3>
+                    <h3 class="suggest-product-price">
+                        <?php echo wc_price(wc_get_price_to_display($product, array('price' => $product->get_regular_price()))); ?>
+                    </h3>
+                    <a href="<?php echo wc_get_cart_url(); ?>?add-to-cart=<?php echo $product->get_id(); ?>">
+                        <span class="suggest-product-detail">افزودن به سبد خرید</span>
+                    </a>
+                </div>
+                <?php
+            }
+        } else {
+            ?>
+            <div class="suggest-box">
+                <h3 class="suggest-title">پیشنهادی نداریم</h3>
+                <a href="">
+                    <img src="<?php bloginfo("template_url") ?>/assets/img/suggest-product.png" alt="" />
+                </a>
+                <h3 class="suggest-product-title"></h3>
+                <h3 class="suggest-product-price"></h3>
+                <a href="#">
+                    <span class="suggest-product-detail">مشاهده محصولات</span>
+                </a>
+            </div>
+            <?php
+        }
+        wp_reset_postdata();
+        ?>
+        <!-- <div class="suggest-box">
             <h3 class="suggest-title">پیشنهاد رکوتیک</h3>
             <a href="">
                 <img src="<?php bloginfo("template_url") ?>/assets/img/suggest-product.png" alt="" />
@@ -83,7 +131,7 @@
             <a href="">
                 <span class="suggest-product-detail">افزودن به سبد خرید</span>
             </a>
-        </div>
+        </div> -->
         <div class="discount-box swiper discount-swiper">
             <div class="swiper-wrapper swipper-countdown-slider">
                 <?php
