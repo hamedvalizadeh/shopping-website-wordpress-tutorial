@@ -2,14 +2,6 @@
 
 <head>
   <?php get_header('head'); ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/style.css" />
-  <?php get_header('head-style'); ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/footer.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/bread-crumb.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/page-content.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/page-aside.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/post.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/comments.css">
 </head>
 
 <body>
@@ -53,7 +45,7 @@
         </p>
       </div>
     </section>
-    
+
     <?php get_sidebar('pgeaside'); ?>
     <section class="page-content recotic-comment">
       <?php comments_template(); ?>

@@ -2,11 +2,6 @@
 
 <head>
   <?php get_header('head'); ?>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/style.css" />
-  <?php get_header('head-style'); ?>  
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/footer.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/bread-crumb.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/not-found.css" />
 </head>
 
 <body>

@@ -2,18 +2,6 @@
 
 <head>
     <?php get_header('head'); ?>
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/style.css" />
-    <?php get_header('head-style'); ?>
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/slider.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/discount-box.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/suggest-box.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/icon-box.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/best-selling.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/middle-banner.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/last-article.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/authentic-brand.css" />
-    <link rel="stylesheet" href="<?php bloginfo("template_url") ?>/assets/css/footer.css" />
 </head>
 
 <body>
