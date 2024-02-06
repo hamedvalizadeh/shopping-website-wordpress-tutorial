@@ -280,7 +280,7 @@ function content_my_account()
 
 add_action('woocommerce_account_recotik_doreha_endpoint', 'content_my_account');
 
-//HINT: enqueue styles
+//HINT: enqueue styles and scripts
 function enqueue_all_style()
 {
     wp_enqueue_style('style_css', get_template_directory_uri() . '/assets/css/style.css');
@@ -346,11 +346,19 @@ function enqueue_woocommerce_style()
     wp_enqueue_style('woocommerce_css', get_template_directory_uri() . '/assets/css/woocommerce.css');
 }
 
-add_action('wp_enqueue_scripts', 'recotik_theme_name_scripts');
-function recotik_theme_name_scripts()
+function enqueue_woocommerce_scripts()
 {
-    // wp_enqueue_script('script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true);
+    wp_enqueue_script('swiperbundlemin_js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '11.0.3', true);
+    wp_enqueue_script('jquerymin_js', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), '1.12.4', true);
+    wp_enqueue_script('jquerypluginmin_js', get_template_directory_uri() . '/assets/js/jquery.plugin.min.js', array(), '2.1.0', true);
+    wp_enqueue_script('jquerycountdown_js', get_template_directory_uri() . '/assets/js/jquery.countdown.js', array(), '2.1.0', true);
+    wp_enqueue_script('recotik_js', get_template_directory_uri() . '/assets/js/recotik.js', array(), '1.0.0', true);
+}
 
+add_action('wp_enqueue_scripts', 'recotik_theme_name_styles_and_scripts');
+function recotik_theme_name_styles_and_scripts()
+{
+    enqueue_woocommerce_scripts();
     enqueue_all_style();
 
     if (is_woocommerce()) {

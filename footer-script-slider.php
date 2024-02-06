@@ -1,9 +1,3 @@
-<script src="<?php bloginfo("template_url") ?>/assets/js/swiper-bundle.min.js"></script>
-<script src="<?php bloginfo("template_url") ?>/assets/js/jquery.min.js"></script>
-<script src="<?php bloginfo("template_url") ?>/assets/js/jquery.plugin.min.js"></script>
-<script src="<?php bloginfo("template_url") ?>/assets/js/jquery.countdown.js"></script>
-<script src="<?php bloginfo("template_url") ?>/assets/js/recotik.js"></script>
-
 <script>
     var swiper = new Swiper(".first-swiper", {
         loop: true,
