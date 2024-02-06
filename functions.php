@@ -287,7 +287,7 @@ function enqueue_all_style()
     wp_enqueue_style('menu_css', get_template_directory_uri() . '/assets/css/menu.css', array(), '1.0.0');
     wp_enqueue_style('header_css', get_template_directory_uri() . '/assets/css/header.css', array(), '1.0.0');
     wp_enqueue_style('fontawsomeall_css', get_template_directory_uri() . '/assets/css/font-awsome-all.css', array(), '1.0.0');
-    wp_enqueue_style('footer_css', get_template_directory_uri() . '/assets/css/footer.css', array(), '1.0');
+    wp_enqueue_style('footer_css', get_template_directory_uri() . '/assets/css/footer.css', array(), '1.0.0');
 
     wp_enqueue_style('breadcrumb_css', get_template_directory_uri() . '/assets/css/bread-crumb.css', array(), '1.0.0');
     wp_enqueue_style('pageaside_css', get_template_directory_uri() . '/assets/css/page-aside.css', array(), '1.0.0');
